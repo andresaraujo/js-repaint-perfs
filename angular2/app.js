@@ -1,9 +1,7 @@
-var AppComponent = ng.
+var AppComponent = ng.core.
   Component({
-    selector: 'my-app'
-  }).
-  View({
-    directives: [ng.NgFor],
+    selector: 'my-app',
+    directives: [],
     templateUrl: 'app-component.html'
   }).
   Class({
@@ -20,5 +18,6 @@ var AppComponent = ng.
   });
 
 document.addEventListener('DOMContentLoaded', function() {
-  ng.bootstrap(AppComponent);
+  ng.core.enableProdMode();
+  ng.platform.browser.bootstrap(AppComponent);
 });
