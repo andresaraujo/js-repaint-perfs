@@ -1,0 +1,19 @@
+<td class="dbname">
+	{{db.dbname}}
+</td>
+<!-- Sample -->
+<td class="query-count">
+	<span [className]="db.lastSample.countClassName">
+              {{db.lastSample.nbQueries}}
+            </span>
+</td>
+<!-- Query -->
+<td *ngFor="#q of db.lastSample.topFiveQueries; trackBy:trackSample" [className]="q.elapsedClassName">
+	{{q.formatElapsed}}
+	<div class="popover left">
+		<div class="popover-content">
+			{{q.query}}
+		</div>
+		<div class="arrow"></div>
+	</div>
+</td>
