@@ -6,11 +6,7 @@ var DbQuery = ng.core.
 	inputs: ['query']
   })
   .Class({
-	  constructor: function DbQuery(){
-		  var comp = this;
-		  console.log('init')
-
-	  }
+	  constructor: function DbQuery(){}
   })
 
 
@@ -24,12 +20,12 @@ var DbComponent = ng.core.
   })
   .Class({
 	  constructor: function DbComponent(){
-		  console.log('init')
 		  var me = this;
-		  me.trackSample = function(idx, sample){
+	  },
+	  trackSample: function(idx, sample){
+			  
 		    return idx;
 	      }
-	  }
   })
 
 var AppComponent = ng.core.

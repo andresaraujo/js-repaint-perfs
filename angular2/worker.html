@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.angularjs.org/2.0.0-beta.8/angular2-polyfills.js"></script>
+	<script src="https://code.angularjs.org/tools/typescript.js"></script>
+	<script src="https://code.angularjs.org/tools/system.js"></script>
+	
+    <script src="./lib/ui.dev.js"></script>
+    <link href="../lib/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../styles.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <title>dbmon (angular 2)</title>
+</head>
+<body>
+<my-app></my-app>
+<script src="../ENV.js"></script>
+<script src="../lib/memory-stats.js"></script>
+<script src="../lib/monitor.js"></script>
+<script src="../ga.js"></script>
+<script>
+	System.config({
+		transpiler: 'typescript',
+		typescriptOptions: {
+    		emitDecoratorMetadata: true
+  		},
+		
+		packages: {
+			app: {
+				defaultExtension: 'ts',
+				main: 'worker-ui.ts'
+			}
+		}
+	})
+	System.import('worker-ui.ts')
+	  .catch(function(err){
+		console.log(err);
+	  });
+</script>
+</body>
+</html>

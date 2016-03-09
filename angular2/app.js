@@ -18,7 +18,7 @@ var AppComponent = ng.core.
     selector: 'my-app',
     directives: [DbComponent],
     templateUrl: 'app-component.html',
-	//changeDetection: ng.core.ChangeDetectionStrategy.OnPush
+	changeDetection: ng.core.ChangeDetectionStrategy.OnPush
   }).
   Class({
     constructor: function AppComponent() {
@@ -26,7 +26,7 @@ var AppComponent = ng.core.
       this.databases = [];
 
 	  me.trackDatabase = function(idx, db){
-		  return db.dbname;
+		  return idx;
 	  }
 
       var load = function() {

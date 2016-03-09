@@ -3,7 +3,7 @@
     <table class="table table-striped latest-data">
         <tbody>
         <!-- Database -->
-        <tr *ngFor="#db of databases; trackBy:trackDatabase" db-row [db]="db"></tr>
+        <tr db-row *ngFor="#db of databases; trackBy:trackDatabase" [db]="db"></tr>
         </tbody>
     </table>
 </div>
