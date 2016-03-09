@@ -3,7 +3,8 @@ var DbQuery = ng.core.
   Component({
     selector: '[db-query]',
     templateUrl: 'db-query.html',
-	inputs: ['query']
+	inputs: ['query'],
+	
   })
   .Class({
 	  constructor: function DbQuery(){}

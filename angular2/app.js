@@ -18,24 +18,24 @@ var AppComponent = ng.core.
     selector: 'my-app',
     directives: [DbComponent],
     templateUrl: 'app-component.html',
-	changeDetection: ng.core.ChangeDetectionStrategy.OnPush
   }).
   Class({
     constructor: function AppComponent() {
       var me = this;
       this.databases = [];
 
-	  me.trackDatabase = function(idx, db){
-		  return idx;
-	  }
-
+	  
       var load = function() {
-          me.databases = ENV.generateData().toArray();
+          me.databases = ENV.generateData(true).toArray();
           Monitoring.renderRate.ping();
           setTimeout(load, ENV.timeout);
       };
       load();
-    }
+    },
+	trackDatabase : function(idx, db){
+		  return db.dbname;
+	}
+
   });
 
 document.addEventListener('DOMContentLoaded', function() {

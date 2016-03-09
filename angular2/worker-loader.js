@@ -1,6 +1,6 @@
 console.log('worker!')
 importScripts("https://code.angularjs.org/2.0.0-beta.8/angular2-polyfills.js",
-              "../ENV.js",
+              "../ENV-worker.js",
 	          "https://code.angularjs.org/tools/typescript.js",
 	          "https://code.angularjs.org/tools/system.js",
               "./lib/worker.dev.js"
