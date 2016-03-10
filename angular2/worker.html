@@ -2,10 +2,8 @@
 <html>
 <head>
     <script src="https://code.angularjs.org/2.0.0-beta.8/angular2-polyfills.js"></script>
-	<script src="https://code.angularjs.org/tools/typescript.js"></script>
 	<script src="https://code.angularjs.org/tools/system.js"></script>
-	
-    <script src="./lib/ui.dev.js"></script>
+	<script src="./lib/ui.dev.js"></script>
     <link href="../lib/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="../styles.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
@@ -18,19 +16,18 @@
 <script src="../ga.js"></script>
 <script>
 	System.config({
-		transpiler: 'typescript',
 		typescriptOptions: {
     		emitDecoratorMetadata: true
   		},
 		
 		packages: {
 			app: {
-				defaultExtension: 'ts',
-				main: 'worker-ui.ts'
+				defaultExtension: 'js',
+				main: 'worker-ui.js'
 			}
 		}
 	})
-	System.import('worker-ui.ts')
+	System.import('worker-ui.js')
 	  .catch(function(err){
 		console.log(err);
 	  });

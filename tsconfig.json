@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"module": "system",
+		"target": "es5",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true
+	},
+	"files": [
+		"angular2/worker-app.ts",
+		"angular2/worker-ui.ts"
+	]
+}

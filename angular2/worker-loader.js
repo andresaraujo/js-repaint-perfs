@@ -17,8 +17,8 @@ System.config({
 		},
 		packages: {
 			app: {
-				defaultExtension: 'ts',
-				main: 'app.ts'
+				defaultExtension: 'js',
+				main: 'app.js'
 			}
 		}
 	})

@@ -5,7 +5,7 @@ import {
   MessageBus
 } from "angular2/platform/worker_app";
 
-import {App} from "app";
+import {App} from "./app/app";
 
 enableProdMode()
 

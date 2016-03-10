@@ -27,7 +27,7 @@ import {MessageBus} from 'angular2/platform/worker_app'
 
   `,
   inputs: ['db'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  //changeDetection: ChangeDetectionStrategy.OnPush
 })
 class DBRow {
 	trackSample(idx, sample){
@@ -57,12 +57,20 @@ export class App {
 	databases = [];
 	constructor(bus:MessageBus){
 		let pingChannel = bus.initChannel('renderPing');
+		let controlChannel = bus.initChannel('mutationRate');
+		bus
+		  .from('mutationRate')
+		  .subscribe(rate => {
+			ENV.mutations(rate / 100);
+		});
+		
 		let ping = bus.to('renderPing');
+		
 		const load = () =>  {
-          this.databases = ENV.generateData().toArray();
+          this.databases = ENV.generateData(true).toArray();
           ping.next('ping');
           setTimeout(load, ENV.timeout);;;
-      };
+       };
       load();
 	}
 	trackDatabase(idx, db){
