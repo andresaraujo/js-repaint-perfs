@@ -39,7 +39,7 @@
     { type: 'optimized', id: 'angular-light', url: './angular-light/opt.html', label: 'DBMON Angular Light' },
     { type: 'optimized', id: 'angular2', url: './angular2/opt.html', label: 'DBMON Angular 2.0 Beta' },
 	{ type: 'optimized', id: 'angular2', url: './angular2/worker.html', label: 'DBMON Angular 2.0 Beta - Web Workers' },
-	{ type: 'optimized', id: 'angular2-dart', url: './angular2-dart/build/web/index.html', label: 'DBMON Angular 2.0 Dart Beta' },
+	{ type: 'naive', id: 'angular2-dart', url: './angular2-dart/build/web/index.html', label: 'DBMON Angular 2.0 Dart Beta' },
     { type: 'optimized', id: 'angular-track-by', url: './angular-track-by', label: 'DBMON Angular (track by $index)' },
     { type: 'optimized', id: 'vanilla', url: './vanilla-optimized', label: 'DBMON vanilla' },
     { type: 'optimized', id: 'maskjs', url: './mask/index_opt.html', label: 'DBMON MaskJS' },
