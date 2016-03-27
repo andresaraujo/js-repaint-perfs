@@ -24,7 +24,7 @@ class AppComponent {
   }
 
   load(_) {
-    databases = ENV.generateData(true).toArray();
+    databases = ENV.generateData(false).toArray();
     Monitoring.renderRate.ping();
   }
 
